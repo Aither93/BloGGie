@@ -1,0 +1,14 @@
+{% extends 'blog_app/base.html' %}
+{% block content %}
+<h1>Add new Post</h1>
+<form action="{% url 'blog_app:new_post' %}" method="POST">
+	<div class="row mb-3">
+		{% csrf_token %}
+		{{form}}
+		
+	</div>
+	<button class="btn btn-primary" name="submit">Add new Post</button>
+</form>
+<a class="btn btn-danger" href="{% url 'blog_app:posts' %}">Cancel</a>
+
+{% endblock content%}

@@ -1,0 +1,24 @@
+{% extends 'blog_app/base.html' %}
+
+{% block content %}
+<div class="card mb-3">
+	<h4 class="card-header">{{post.title}}</h4>
+	<div class="card-body">
+		{{post.content}}
+	</div>
+
+</div>
+
+
+<a class ="btn btn-outline-danger btn-sm mt-1" 
+	href="{% url 'blog_app:delete_post' post.id %}">
+	Delete Post
+</a>
+
+<a class ="btn btn-outline-primary btn-sm mt-1" 
+	href="{% url 'blog_app:edit' post.id %}">
+	Edit Post
+</a>
+
+
+{% endblock content%}
