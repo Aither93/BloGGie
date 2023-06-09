@@ -3,6 +3,4 @@ Django==*
 django-bootstrap5==23.1
 sqlparse==0.4.4
 tzdata==2023.3
-# Requirements for live projects
-gunicorn
-psycopg2
+
